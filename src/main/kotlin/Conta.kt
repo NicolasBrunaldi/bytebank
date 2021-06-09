@@ -5,17 +5,21 @@ class Conta(val nome: String, val numero: Int) {
 
     fun depositar(valor: Double){
 
-        if(valor > 0) saldo += valor
+        if(valor > 0) this.saldo += valor
     }
 
     fun sacar(valor: Double){
 
-        if (saldo >= valor) saldo -= valor
+        if (this.saldo >= valor) this.saldo -= valor
     }
 
-    fun transferir(destino: Conta, valor: Double){
+    fun transferir(destino: Conta, valor: Double): Boolean {
 
-        sacar(valor)
-        destino.depositar(valor)
+        if(valor in 0.0 .. this.saldo) {
+            sacar(valor)
+            destino.depositar(valor)
+            return true
+        }
+        return false
     }
 }
