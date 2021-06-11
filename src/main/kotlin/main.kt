@@ -8,15 +8,12 @@ fun main(){
         plr = 1000.0
     )
 
-    val funcionario : Funcionario = Funcionario(nome = "João Ferreira da Silva", cpf = "222.312.545-86", salario = 1500.0)
-
     val gerente : Funcionario = Gerente(nome = "Fernando Oliveira", cpf = "090.868.657-03", salario = 2300.0, senha = "54321")
 
     val calculadoraBonificacao = CalculadoraBonificacao()
 
     calculadoraBonificacao.registra(diretor)
     calculadoraBonificacao.registra(gerente)
-    calculadoraBonificacao.registra(funcionario)
 
     println("total de bonificações = ${calculadoraBonificacao.total}")
     println()

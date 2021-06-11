@@ -6,7 +6,7 @@ class Diretor(nome: String,
 
     override val bonificacao: Double
         get() {
-            return super.bonificacao + salario + this.plr
+            return 1.1 * salario + this.plr
         }
 
     fun autentica(senha: String): Boolean {
