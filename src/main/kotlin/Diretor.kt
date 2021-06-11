@@ -1,8 +1,8 @@
-class Diretor( nome: String,
-               cpf: Int,
-               salario: Double,
-               val plr: Double,
-               var senha: String): Funcionario(nome = nome, cpf = cpf, salario = salario) {
+class Diretor(nome: String,
+              cpf: String,
+              salario: Double,
+              val plr: Double,
+              var senha: String): Funcionario(nome = nome, cpf = cpf, salario = salario) {
 
     override val bonificacao: Double
         get() {

@@ -1,7 +1,7 @@
-class Gerente( nome: String,
-               cpf: Int,
-               salario: Double,
-               var senha: String): Funcionario(nome = nome, cpf = cpf, salario = salario) {
+class Gerente(nome: String,
+              cpf: String,
+              salario: Double,
+              var senha: String): Funcionario(nome = nome, cpf = cpf, salario = salario) {
 
     override val bonificacao: Double
         get() {

@@ -1,0 +1,1 @@
+class ContaPoupanca(nome: String, numero: Int) : Conta(nome, numero) {}
