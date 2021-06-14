@@ -1,3 +1,5 @@
+import br.com.alura.bytebank.modelo.*
+
 fun main(){
 
     val diretor : Funcionario = Diretor(
@@ -18,7 +20,7 @@ fun main(){
     println("total de bonificações = ${calculadoraBonificacao.total}")
     println()
 
-    val contaCorrenteNicolas :Conta = ContaCorrente(nome = "Nicolas Brunaldi de Oliveira", numero = 1000)
+    val contaCorrenteNicolas : Conta = ContaCorrente(nome = "Nicolas Brunaldi de Oliveira", numero = 1000)
     val contaPoupancaJoao : Conta = ContaPoupanca(nome = "João Ferreira da Silva", numero = 1001)
 
     contaCorrenteNicolas.depositar(1000.0)
