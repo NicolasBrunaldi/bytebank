@@ -20,13 +20,13 @@ fun main(){
     println("total de bonificações = ${calculadoraBonificacao.total}")
     println()
 
-    val contaCorrenteNicolas : Conta = ContaCorrente(titular = "Nicolas Brunaldi de Oliveira", numero = 1000)
-    val contaPoupancaJoao : Conta = ContaPoupanca(titular = "João Ferreira da Silva", numero = 1001)
+    val contaCorrenteNicolas : Conta = ContaCorrente(Cliente(nome = "Nicolas Brunaldi de Oliveira", cpf = "222.987.675-02", senha = "12345", Endereco()), numero = 1000)
+    val contaPoupancaJoao : Conta = ContaPoupanca(titular = Cliente(nome = "Fernando Oliveira", cpf = "262.957.899-07", senha = "12345", Endereco()), numero = 1001)
 
     contaCorrenteNicolas.depositar(1000.0)
     contaPoupancaJoao.depositar(100.0)
 
-    contaCorrenteNicolas.transferir(valor = 100.0, destino = contaPoupancaJoao)
+    contaCorrenteNicolas.transferir(valor = 1000.0, destino = contaPoupancaJoao)
     println("saldo conta joão ${contaPoupancaJoao.saldo}")
     println("saldo conta joão ${contaCorrenteNicolas.saldo}")
 }
